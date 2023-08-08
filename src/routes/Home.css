@@ -1,0 +1,78 @@
+/* home.css */
+
+/* Overall container styles */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Loader styles */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+  height: 100vh;
+}
+
+/* Movie grid */
+.movies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+  gap: 2rem; /* Adjust spacing between movies */
+  width: 90%; /* Center content with margin auto */
+  max-width: 1200px; /* Limit max width for larger screens */
+  padding: 2rem; /* Add padding to the sides */
+  margin-top: 3rem; /* Add spacing from the top */
+}
+
+/* Individual movie card */
+.movie {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Movie poster */
+.movie img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Movie title */
+.movie h3 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+/* Movie genres */
+.movie .movie_genres {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Movie summary */
+.movie p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #555;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .movies {
+    grid-template-columns: 1fr; /* Single column layout for small screens */
+  }
+}
